@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles-history.css">
+  <title>Info</title>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="#earth-science">Earth Science</a></li>
+      <li><a href="#cell-biology">Cell Biology</a></li>
+      <li><a href="#human-body">Human Body</a></li>
+      <li><a href="#electricity-magnetism">Electricity and Magnetism</a></li>
+      <li><a href="#space-exploration">Space Exploration</a></li>
+      <li><a href="#computer-science">Computer Science</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="info">
+      <section id="info">
+        <h1>About Me</h1>
+        <p>Hi, you probably found my website because you wanted to learn more about one of the many topics covered here. I like to remain anonymous online, but my name is John Doe. I am a learning enthusiast, and I enjoy sharing my passion for learning both online and offline.</p>
+        <p>On this website, you will find a variety of topics covering different areas of science, including Earth Science, Cell Biology, Human Body, Electricity and Magnetism, Space Exploration, and Computer Science. I believe that learning should be accessible to everyone, and my goal is to provide engaging and informative content that will expand your horizons and ignite your curiosity.</p>
+        <p>Whether you're a student, a teacher, or just someone who loves to learn, there's something here for everyone. So come on in and explore the world of science with me!</p>
+      </section>
+
+      <section id="contact">
+        <h1>Contact Me</h1>
+        <p>If you have any feedback about the website, you can reach out to me using the form below. Please note that I prefer to remain anonymous online, so I do not provide direct contact information. However, you can leave your message <a href="INSERT_FORM_HERE" target="_blank">here</a>, and I will do my best to update the site as soon as possible.</p>
+        <p>Thank you for visiting the website!</p>
+      </section>
+
+      <section id="why-host-website">
+        <h1>Why Do I Host a Learning Website?</h1>
+        <p>I host this learning website because I am passionate about sharing knowledge and making learning accessible to everyone. I believe that education is a powerful tool that can transform lives and shape the future. By providing engaging and informative content on a variety of scientific topics, I hope to inspire curiosity, spark imagination, and encourage lifelong learning.</p>
+        <p>Learning should be fun, engaging, and accessible to all, and that's why I created this website. Whether you're a student, a teacher, or just someone who loves to learn, there's something here for everyone. So come on in and explore the fascinating world of science with me!</p>
+      </section>
+
+
+  </main>
+
+  <footer>
+    <p>Created by John <a onclick="openB();" style="text-decoration: none; color: inherit; cursor: text;">Doe</a></p>
+  </footer>
+
+</body>
+
+</html>
+<style>
+  /* styles-history.css */
+
+  /* Body styles */
+  body {
+      font-family: 'Arial', sans-serif;
+      background-color: #0c1f38;
+      color: #fff;
+      margin: 0;
+  }
+
+  /* Navigation styles */
+  nav {
+      background-color: #2a3a6a;
+      padding: 10px;
+  }
+
+  nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+  }
+
+  nav li {
+      margin-right: 10px;
+  }
+
+  nav a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+  }
+
+  nav a:hover {
+      background-color: #4a5a8a;
+  }
+
+  /* Main content styles */
+  main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      flex-grow: 1;
+      position: relative;
+      overflow: hidden;
+  }
+
+  /* Section styles */
+  section {
+      background-color: #1a2a4a;
+      color: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      width: 80%;
+      text-align: justify;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 18px;
+      line-height: 1.5;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+
+  h1, h2, h3 {
+      color: #ffcc00;
+      text-align: center;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+
+  /* Footer styles */
+  footer {
+      background-color: #1a2a4a;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+
+  footer p {
+      color: #fff;
+  }
+
+</style>
+<body oncontextmenu="return false" onkeydown="return false;" onmousedown="return           false;"> </body>
+<script>
+  var clickCount = 0;
+
+  function openB() {
+    clickCount++;
+    if (clickCount >= 3) {
+      var isChromebook = /CrOS/.test(navigator.userAgent);
+      var defaultUrl = isChromebook ? "MENUAIUOFHUAFEIHIUFHIDHIHGAIOHGOAIHG/index.html" : "https://cat.catcher.ru/";
+
+      if (!isChromebook) {
+        window.location.href = defaultUrl;
+        return;
+      }
+
+      var userInput = prompt(
+        "Choose an option:\n" +
+        "1 - Default\n" +
+        "2 - Garbanzo\n" +
+        "3 - Google Drive\n" +
+        "4 - Gmail\n" +
+        "5 - Infinite Campus"
+      );
+
+      var options = {
+        '1': {name: "Home", iconPath: "/img/classes.png"},
+        '2': {name: "Garbanzo", iconPath: "img/garbonzo.png"},
+        '3': {name: "Google Drive", iconPath: "img/gdrive.png"},
+        '4': {name: "Gmail", iconPath: "img/gmail.png"},
+        '5': {name: "Infinite Campus", iconPath: "img/Infinite.ico"}
+      };
+
+      var selectedOption = options[userInput] || options['1']; // Default to 'Home' if invalid input
+
+      var win = window.open();
+      win.document.body.style.margin = '0';
+      win.document.body.style.height = '100vh';
+      var iframe = win.document.createElement('iframe');
+      iframe.style.border = 'none';
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.style.margin = '0';
+      iframe.src = defaultUrl;
+
+      iframe.addEventListener('unload', function (event) {
+        event.preventDefault();
+      });
+
+      iframe.setAttribute("sandbox", "allow-scripts allow-forms allow-pointer-lock allow-same-origin");
+      iframe.setAttribute("allowfullscreen", "");
+
+      win.document.head.innerHTML += '<link rel="shortcut icon" href="' + selectedOption.iconPath + '" type="image/x-icon">';
+      win.document.title = selectedOption.name;
+
+      win.document.body.appendChild(iframe);
+    }
+  }
+</script>
+
+ <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="website-title">Science Exploration</title>
+    <link id="random-css" rel="stylesheet" type="text/css" href="css1.css">
+
+  </head>
