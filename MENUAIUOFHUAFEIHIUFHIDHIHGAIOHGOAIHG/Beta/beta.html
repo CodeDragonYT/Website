@@ -1,139 +1,250 @@
+<body>
+  <script>
+    if (window.self === window.top) {
+      window.location.href = "https://www.google.com/search?q=BBC&tbm=isch";
+    }
+
+  </script>
+</body>
+<script src="script.js"></script>
+<h1 id="main-title">Menu</h1>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Build Your Own Game Site</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #1a1a1a;
-      color: #ddd;
-    }
-
-    header {
-      background-color: #333;
+      overflow: hidden;
+      background-color: #000000;
       color: #fff;
+    }
+
+    #main-title {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 64px;
+      color: #BC13FE;
       text-align: center;
-      padding: 20px 0;
+      z-index: 999;
+      /* Ensures the title is above other elements */
     }
 
-    main {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #333;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    #pixel-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
-    section {
-      margin-bottom: 30px;
+    .pixel {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background-color: #ff00ff;
+      border-radius: 50%;
+      opacity: 0;
+      animation: fadeIn 0.0ms ease-out forwards, glow 1s ease-in-out infinite alternate;
     }
 
-    h1, h2 {
-      color: #ddd;
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      margin-bottom: 10px;
-    }
-
-    ul li a {
-      color: #4abdac;
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      color: #777;
-    }
-
-    footer p {
-      margin: 0;
+    @keyframes glow {
+      to {
+        box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+      }
     }
   </style>
 </head>
+
 <body>
+  <div id="pixel-container"></div>
 
-  <header>
-    <h1>Build Your Own Game Site</h1>
-    <h2>Use this site at home: https://bit.ly/Codedragon</h2>
-  </header>
+  <style>
+    .button-container {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-  <main>
-    <section>
-      <h2>Step 1: Create Accounts</h2>
-      <ul>
-        <li><a href="https://replit.com/">Replit</a> - Write and test your code.</li>
-        <li><a href="https://github.com/">Github</a> - Store your code</li>
-        <li><a href="https://render.com/">Render</a> - Host your website.</li>
-        <li><a href="https://freedns.afraid.org/">Freedns</a> - Get a free subdomain for your website.</li>
-        <li><a href="https://chat.openai.com/">ChatGPT</a> (if you don't know how to code) - Get help.</li>
-      </ul>
-    </section>
+    .button {
+      font-size: 16px;
+      padding: 10px 15px;
+      border: none;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #4CAF50;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  </style>
 
-    <section>
-      <h2>Step 2: Get the Code</h2>
-      <p>Copy the code for your website from these repositories:</p>
-      <ul>
-        <li>On Replit: <a href="https://replit.com/@blazermh/Education?v=1#H.html">Code on Replit</a></li>
-        <li>On Github: <a href="https://github.com/CodeDragonYT/Website">Code on Github</a></li>
-      </ul>
-    </section>
+  <div class="button-container">
+    <a href="/location1" class="button">Defult</a>
+    <a href="/location2" class="button">Defult</a>
+    <!-- Add more buttons as needed -->
+  </div>
 
-    <section>
-      <h2>Step 3: Add Games</h2>
-      <p>Add games to your website:</p>
-      <ul>
-        <li>Main website: <a href="https://github.com/CodeDragonYT/3kh0-lite">3kh0-lite Repo</a></li>
-        <li>Soundboard: <a href="https://github.com/CodeDragonYT/soundboard">Soundboard Repo</a></li>
-      </ul>
-    </section>
 
-    <section>
-      <h2>Step 4: Make Your Website Live</h2>
-      <p>Use Render to make your website live. If you need help, join the Discord server: <a href="https://discord.com/invite/AMJRb7Ygte">Discord</a>.</p>
-    </section>
-
-    <section>
-      <h2>Step 5: Get a Domain</h2>
-      <p>Go to Freedns and get a free subdomain (choose a public domain if you want it to take less time) for your website. Make sure to choose a good name for your main website. Set the DNS to 216.24.57.1.</p>
-    </section>
-
-    <section>
-      <h2>Step 6: Link Your Domain</h2>
-      <p>Link your subdomain to your website on Render. Go to settings and find the option for custom domains.</p>
-    </section>
-
-    <section>
-      <h2>Step 7: Final Touches</h2>
-      <p>Add links to all your games on your main website. Edit the main page however you like, but remember to give credit to CodeDragon.</p>
-    </section>
-
-    <section>
-      <h2>Need Help?</h2>
-      <p>Subscribe to this channel to learn how to build your own game site:</p>
-      <p><a href="https://www.youtube.com/channel/UCYJsi1xB-5rQ21NNbCee2xQ">Visit our YouTube Channel</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>Created by CodeDragon | Do Not Remove Credit</p>
-  </footer>
 
 </body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    #buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .button {
+      width: 150px;
+      height: 40px;
+      background-color: #8a2be2;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 40px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ff00ff;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="pixel-canvas"></canvas>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    #buttons {
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  </style>
+  </head>
+
+  <body>
+    <canvas id="pixel-canvas"></canvas>
+    <script>
+      const canvas = document.getElementById('pixel-canvas');
+      const ctx = canvas.getContext('2d');
+      const buttonsContainer = document.getElementById('buttons');
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const pixels = [];
+      const pixelCount = 200;
+
+      function initPixels() {
+        for (let i = 0; i < pixelCount; i++) {
+          pixels.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            vx: Math.random() * 4 - 2,
+            vy: Math.random() * 4 - 2,
+            size: Math.random() * 3 + 1,
+            color: '#8a2be2'
+          });
+        }
+      }
+
+      function updatePixels() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        for (let i = 0; i < pixels.length; i++) {
+          const pixel = pixels[i];
+
+          pixel.x += pixel.vx;
+          pixel.y += pixel.vy;
+
+          // Boundary checks to keep pixels within the visible area
+          if (pixel.x < 0 || pixel.x > canvas.width - pixel.size) {
+            pixel.vx = -pixel.vx;
+          }
+
+          if (pixel.y < 0 || pixel.y > canvas.height - pixel.size) {
+            pixel.vy = -pixel.vy;
+          }
+
+          ctx.fillStyle = pixel.color;
+          ctx.fillRect(pixel.x, pixel.y, pixel.size, pixel.size);
+        }
+      }
+
+      function animate() {
+        updatePixels();
+        requestAnimationFrame(animate);
+      }
+
+      function startAnimation() {
+        initPixels();
+        animate();
+        // Display buttons immediately without delay
+      }
+
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+
+      startAnimation();
+    </script>
+  </body>
+
 </html>
